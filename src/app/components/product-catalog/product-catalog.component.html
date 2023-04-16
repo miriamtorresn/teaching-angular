@@ -1,0 +1,19 @@
+<div class="product-catalog">
+    <div class="product" *ngFor="let product of products">
+        <div class="product-image">
+            <img src="{{product.image}}" alt="{{product.title}}"/>
+        </div>
+        <p class="product-detail product-title">
+            {{product.title}}
+        </p>
+        <p class="product-detail product-description">
+            {{product.description}}
+        </p>
+        <p class="product-detail product-category">
+            {{product.category}}
+        </p>
+        <p class="product-detail">
+            {{product.price | currency}}
+        </p>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+.product {
+    margin-right: 16px;
+    flex: 0 0 calc(33% - 16px);
+
+    &-catalog {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 16px;
+    }
+
+    &-detail {
+        color: #333333;
+    }
+
+    &-image {
+        text-align: center;
+        
+        img {
+            height: 200px;
+            width: 200px;
+            object-fit: contain;
+        }
+    }
+
+    &-title {
+        font-weight: bold;
+    }
+
+    &-description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        overflow: hidden;
+        max-height: 3.6em;
+        line-height: 120%;
+    }
+
+    &-category {
+        background-color: #333333;
+        border-radius: 5px;
+        color: white;
+        padding: 3px 10px;
+        display: inline;
+    }
+}
