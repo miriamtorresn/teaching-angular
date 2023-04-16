@@ -7,16 +7,24 @@ import { IProduct } from '../../interfaces/IProduct';
   templateUrl: './product-catalog.component.html',
   styleUrls: ['./product-catalog.component.scss']
 })
+
+// Component that displays product list
 export class ProductCatalogComponent implements OnInit {
 
   public products: IProduct[] = [];
 
   constructor(
-    private ProductsService: ProductsService
+    private _productsService: ProductsService
   ) {}
 
+  /**
+   * NgOnInit is part of the angular lifecycle
+   * https://angular.io/api/core/OnInit
+   * 
+   * Loading products from catalog
+   */
   ngOnInit(): void {
-    this.ProductsService.getProducts()
+    this._productsService.getProducts()
       .subscribe((data) => {
         this.products = data;
       });

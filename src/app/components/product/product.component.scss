@@ -1,0 +1,12 @@
+.product {
+    &__details {
+        display: flex;
+    }
+    &__image {        
+        img {
+            height: 300px;
+            width: 300px;
+            object-fit: contain;
+        }
+    }
+}
