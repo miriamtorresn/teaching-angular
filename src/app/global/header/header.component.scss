@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    background-color: rgb(0, 107, 115);
+    color: white;
+
+    &__menu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        padding: 0 10px;
+
+        &--item {
+            display: contents;
+            a {
+                color: white;
+                text-decoration: none;
+                padding: 10px 10px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+        }
+    }
+}
