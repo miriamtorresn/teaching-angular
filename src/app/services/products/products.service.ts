@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { IProduct } from "../interfaces/IProduct";
+import { IProduct } from "../../interfaces/IProduct";
 import { map, Observable, of } from 'rxjs';
 
 @Injectable({

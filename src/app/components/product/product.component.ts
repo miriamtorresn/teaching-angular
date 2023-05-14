@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Params } from "@angular/router";
 import { switchMap, of } from 'rxjs';
-import { ProductsService } from 'src/app/services/products.service';
+import { ProductsService } from '../../services/products/products.service';
 import { IProduct } from "../../interfaces/IProduct";
 
 @Component({
