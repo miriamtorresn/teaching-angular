@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+
 import { ProductCatalogComponent } from '../../components/product-catalog/product-catalog.component';
 import { ProductsPageComponent } from './products.component';
 
@@ -10,7 +11,7 @@ describe('ProductsPageComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        HttpClientModule
+        HttpClientTestingModule
       ],
       declarations: [
         ProductsPageComponent,
@@ -30,7 +31,7 @@ describe('ProductsPageComponent', () => {
 
   it('should render title', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.home-page .main-title')?.textContent).toContain('Welcome to our store!');
+    expect(compiled.querySelector('.products .main-title')?.textContent).toContain('Welcome to our store!');
   });
 
 });

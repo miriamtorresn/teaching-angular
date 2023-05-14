@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { BasicFormComponent } from './basic-form.component';
 
@@ -8,7 +9,8 @@ describe('BasicFormComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [BasicFormComponent]
+      declarations: [BasicFormComponent],
+      imports: [ReactiveFormsModule]
     });
     fixture = TestBed.createComponent(BasicFormComponent);
     component = fixture.componentInstance;
