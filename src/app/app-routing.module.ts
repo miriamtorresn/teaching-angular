@@ -4,6 +4,7 @@ import { ProductsPageComponent } from './pages/products/products.component';
 import { ProductPageComponent } from './pages/product/product.component';
 import { BasicFormComponent } from './pages/basic-form/basic-form.component';
 import { FormGroupComponent } from './pages/form-group/form-group.component';
+import { CalculatorComponent } from './pages/calculator/calculator.component';
 import { NotFoundPageComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: "product/:id", component: ProductPageComponent },
   { path: "basic-form", component: BasicFormComponent },
   { path: "form-group", component: FormGroupComponent },
+  { path: "calculator", component: CalculatorComponent },
   { path: '**', component: NotFoundPageComponent },  
 ];
 

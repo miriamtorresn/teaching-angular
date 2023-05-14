@@ -12,6 +12,7 @@ import { NotFoundPageComponent } from './pages/not-found/not-found.component';
 import { ProductComponent } from './components/product/product.component';
 import { BasicFormComponent } from './pages/basic-form/basic-form.component';
 import { FormGroupComponent } from './pages/form-group/form-group.component';
+import { CalculatorComponent } from './pages/calculator/calculator.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormGroupComponent } from './pages/form-group/form-group.component';
     NotFoundPageComponent,
     ProductComponent,
     BasicFormComponent,
-    FormGroupComponent
+    FormGroupComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,
