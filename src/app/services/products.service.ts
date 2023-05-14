@@ -58,7 +58,8 @@ export class ProductsService {
     // to get full data of an specific product.
     return this.getProducts()
       .pipe(
-        /// parenthesis on an arrow function works as a return
+        // Note: Parentheses on an arrow function works as a return
+        // https://levelup.gitconnected.com/javascript-best-practices-arrow-functions-aefef2517f4
         map((products: IProduct[]) => (products.find((product) => (product.id === id))))
       );
   }
