@@ -1,0 +1,59 @@
+<div>
+    <form [formGroup]="form" (ngSubmit)="submitFunction()">
+        <div>
+            <input type="text" formControlName="name" />
+        </div>
+        <div>
+            <input [class.is-error]="emailField?.touched && emailField?.invalid" type="email" formControlName="email" />
+            <strong *ngIf="emailField?.hasError('required') && emailField?.touched">* Este campo es requerido</strong>
+            <strong *ngIf="emailField?.hasError('maxlength') && emailField?.touched">* Este campo debe ser máximo de 10 caracteres</strong>
+        </div>
+        <div>
+            <input type="date" formControlName="date" />
+        </div>
+        <div>
+            <input type="color" formControlName="color" />
+        </div>
+        <div>
+            <select formControlName="category">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+            </select>
+        </div>
+        <div>
+            <select formControlName="tags" multiple>
+                <option value="tag-1">tag 1</option>
+                <option value="tag-2">tag 2</option>
+                <option value="tag-3">tag 3</option>
+            </select>
+        </div>
+        <div>
+            <input type="checkbox" formControlName="checkbox"/>
+        </div>
+        <div>
+            <label>
+                <input type="radio" name="radio" value="yes" formControlName="radio"/> Yes
+            </label>
+            <label>
+                <input type="radio" name="radio" value="no" formControlName="radio"/> No
+            </label>
+            <label>
+                <input type="radio" name="radio" value="maybe" formControlName="radio"/> Maybe
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="radio" name="zone" value="zone-1" formControlName="zone"/> Zona 1
+            </label>
+            <label>
+                <input type="radio" name="zone" value="zone-2" formControlName="zone"/> Zona 2
+            </label>
+            <label>
+                <input type="radio" name="zone" value="zone-3" formControlName="zone"/> Zona 3
+            </label>
+        </div>
+        <pre>
+        </pre>
+        <button type="submit" [disabled]="isFormInvalid()">Save</button>
+    </form>
+</div>

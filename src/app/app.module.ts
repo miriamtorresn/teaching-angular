@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -9,6 +10,8 @@ import { ProductPageComponent } from './pages/product/product.component';
 import { ProductCatalogComponent } from './components/product-catalog/product-catalog.component';
 import { NotFoundPageComponent } from './pages/not-found/not-found.component';
 import { ProductComponent } from './components/product/product.component';
+import { BasicFormComponent } from './pages/basic-form/basic-form.component';
+import { FormGroupComponent } from './pages/form-group/form-group.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,15 @@ import { ProductComponent } from './components/product/product.component';
     ProductCatalogComponent,
     ProductPageComponent,
     NotFoundPageComponent,
-    ProductComponent
+    ProductComponent,
+    BasicFormComponent,
+    FormGroupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

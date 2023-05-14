@@ -1,0 +1,55 @@
+<div>
+    <div>
+        <input type="text" [formControl]="nameField" />
+    </div>
+    <div>
+        <input [class.is-error]="emailFieldHasError()" type="email" [formControl]="emailField" />
+        <strong *ngIf="emailField.hasError('required') && emailField.touched">* Este campo es requerido</strong>
+        <strong *ngIf="emailField.hasError('maxlength') && emailField.touched">* Este campo debe ser máximo de 10 caracteres</strong>
+    </div>
+    <div>
+        <input type="date" [formControl]="dateField" />
+    </div>
+    <div>
+        <input type="color" [formControl]="colorField" />
+    </div>
+    <div>
+        <select [formControl]="categoryField">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+        </select>
+    </div>
+    <div>
+        <select [formControl]="tagsField" multiple>
+            <option value="tag-1">tag 1</option>
+            <option value="tag-2">tag 2</option>
+            <option value="tag-3">tag 3</option>
+        </select>
+    </div>
+    <div>
+        <input type="checkbox" [formControl]="checkboxField"/>
+    </div>
+    <div>
+        <label>
+            <input type="radio" name="response" value="yes" [formControl]="radioField"/> Yes
+        </label>
+        <label>
+            <input type="radio" name="response" value="no" [formControl]="radioField"/> No
+        </label>
+        <label>
+            <input type="radio" name="response" value="maybe" [formControl]="radioField"/> Maybe
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="radio" name="zone" value="zone-1" [formControl]="zoneField"/> Zona 1
+        </label>
+        <label>
+            <input type="radio" name="zone" value="zone-2" [formControl]="zoneField"/> Zona 2
+        </label>
+        <label>
+            <input type="radio" name="zone" value="zone-3" [formControl]="zoneField"/> Zona 3
+        </label>
+    </div>
+    <button (click)="getNameFieldValue()" [disabled]="emailField.invalid">Get value</button>
+</div>
